@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Выберите плату</title>
+</head>
+<body>
+    <form name="form" method="post">
+        <select name=colours method="GET">
+            {% for colour in colours %}
+            <option value= "{{colour}}" SELECTED>{{ colour }}</option>"
+            {% endfor %}
+        </select>
+        <p><input name="submit_button" type="submit" value="Включить">
+        <p><input name="submit_button" type="submit" value="Выключить">
+    </form>
+</body>
+</html>

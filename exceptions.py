@@ -1,0 +1,3 @@
+
+class PathNotFound(Exception):
+    pass

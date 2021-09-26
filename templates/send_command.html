@@ -1,0 +1,24 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <form name="test" method="post" action="">
+        <p><b>id:</b><br>
+            <input type="text_ip" size="40" name="ip">
+        <p><b>plata:</b><br>
+            <input type="text_plata" size="40" name="plata"> 
+        <p><b>command:</b><br>
+        <select name="comp_select" class="selectpicker form-control">
+            {% for o in command_list %}
+            <option value="{{ o }}">{{ o}}</option>
+            {% endfor %}
+        </select>
+        <p><b>value:</b><br>
+            <input type="text_values" size="40" name="value">    
+        <p><input type="submit" value="Отправить">
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Report</title>
+</head>
+<body>
+<h1>ОТЧЕТ</h1>
+<h2>о текущем статусе функционирования трактов: </h2>
+<h3>Общее количество каналов: {{len}}</h3>
+<h3>Каналы по состояниям: </h3>
+<h4>- норма: {{len - warning - error}}</h4>
+<h4>- несрочная авария: {{warning}}</h4>
+<h4>- срочная авария: {{error}}</h4>
+<div>
+    <form action="" method="post" name="reports">
+        Таблица трактов<br>
+        <div>
+            <table>
+                {% for member in fields %}
+                <th>{{ rus[member] }}</th>
+                {% endfor %}
+                {% for field in data %}
+                <tr>
+                    {% for key in fields %}
+
+
+                    <td> {{ field[key] }} </td>
+
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </form>
+</div>
+</body>
+</html>
